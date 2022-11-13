@@ -1,17 +1,17 @@
-pipeline {
-    agent any
-    
+pipeline
+{
+agent any
+stages {
+stage(‘Pull’) {
+steps{
+script{
+checkout([$class: "GitSCM’, branches: [[name: '*/main’]],
 
-    stages {
-        stage("git pull"){
-            steps{
-              
-                git branch: 'CategorieProduit', 
-                credentialsId: '58958cd6-aceb-4fdd-af59-f536304559a6', 
-                url: 'https://github.com/nesrinehm1996/magasinBack.git'
-                    
-                }
-                
-            	}
-            }
-        }
+userRemoteConfigs: [[
+credentialsId: 'GithubCred',
+url: ‘https://github.com/Ghassenmoalla/Myapp.git']]])
+}
+}
+}
+}
+}
