@@ -8,7 +8,7 @@ script{
 checkout([$class: 'GitSCM’, branches: [[name: '*/main']],
 userRemoteConfigs: [[
 credentialsId: 'GithubCred',
-url: ‘https://github.com/Ghassenmoalla/Myapp.git']]])
+url: 'https://github.com/Ghassenmoalla/Myapp.git']]])
 }
 }
 }
