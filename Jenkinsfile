@@ -16,7 +16,7 @@ stages {
 	stage('Build'){
             steps{
                 script{
-            sh 'wget -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh'
+            sh 'wget -o- https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh'
 		
                 }
                     
