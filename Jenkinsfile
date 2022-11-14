@@ -16,7 +16,7 @@ stages {
 	stage('Build'){
             steps{
                 script{
-            sh 'apt install curl'
+            sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash'
 		
                 }
                     
