@@ -16,12 +16,20 @@ stages {
 	stage('Build'){
             steps{
                 script{
-            sh 'pwd'
+            sh 'curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -'
 		
                 }
-                
-                 
+                    
             }
+       stage('Build'){
+            steps{
+                script{
+            sh 'sudo apt install nodejs'
+		
+                }
+                    
+            }
+       
        
         }         
         
