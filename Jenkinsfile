@@ -16,7 +16,7 @@ stages {
 	stage('Build'){
             steps{
                 script{
-                    sh "node -v"
+                    sh "nvm install v14.15"
                 }
             }
        
