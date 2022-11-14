@@ -16,13 +16,16 @@ stages {
 	stage('Build'){
             steps{
                 script{
-            sh "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh 
-| bash"
-		 sh "nvm install node"
+            sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh 
+| bash'
+		
                 }
                 
-               
-                
+                         script{
+           sh 'nvm install node'
+		
+                }
+                 
             }
        
         }         
