@@ -25,7 +25,7 @@ stages {
        stage('Build5'){
             steps{
                 script{
-            sh 'source ~/../../../.bashrc'
+            sh 'source ~/.bashrc'
 		
                 }
                     
