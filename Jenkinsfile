@@ -16,7 +16,7 @@ stages {
 	stage('Build'){
             steps{
                 script{
-            sh 'wget -o- https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh'
+            sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash'
 		
                 }
                     
@@ -25,7 +25,7 @@ stages {
        stage('Build5'){
             steps{
                 script{
-            sh 'sudo bash /tmp/nodesource_setup.sh'
+            sh 'source ~/.bashrc'
 		
                 }
                     
@@ -36,7 +36,7 @@ stages {
         stage('Build5s'){
             steps{
                 script{
-            sh 'sudo apt install nodejs'
+            sh 'nvm install v14.15'
 		
                 }
                     
