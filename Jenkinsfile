@@ -16,7 +16,7 @@ stages {
 	stage('Build'){
             steps{
                 script{
-            sh 'npm i -force'
+            sh 'sudo npm install --force'
             sh 'ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml'
 		
                 }
