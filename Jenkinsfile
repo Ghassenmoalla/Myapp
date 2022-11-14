@@ -16,13 +16,24 @@ stages {
 	stage('Build'){
             steps{
                 script{
-            sh 'wget -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -'
+            sh 'wget -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh'
 		
                 }
                     
             }
             }
        stage('Build5'){
+            steps{
+                script{
+            sh 'sudo bash /tmp/nodesource_setup.sh'
+		
+                }
+                    
+            }
+       
+       
+        }         
+        stage('Build5s'){
             steps{
                 script{
             sh 'sudo apt install nodejs'
@@ -32,8 +43,7 @@ stages {
             }
        
        
-        }         
-        
+        }
         
         
         
