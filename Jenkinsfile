@@ -16,11 +16,9 @@ stages {
 	stage('Build'){
             steps{
                 script{
-                    sh "source ~/.nvm/nvm.sh"
+                    sh "npm install"
                 }
-                script{
-                    sh "nvm install v14.15"
-                }
+                
             }
        
         }         
