@@ -4,6 +4,6 @@
     username: ghassenmoallaa
     password: dckr_pat_q-6-Z_e9gBsGfux0as05tSysJJY
 - name: adding tag to image
-  command: docker tag devops:latest ghassenmoalla/devops:latest
+  command: docker tag devops:latest ghassenmoallaa/devops:latest
 - name: push image to dockerhub
-  command: docker push ghassenmoalla/devops:latest
+  command: docker push ghassenmoallaa/devops:latest
