@@ -10,7 +10,7 @@
     state: present
     force_source: true
 - name: run container docker
-  docker container: 
+  docker_container: 
     name: myapp_container
     image: devops:latest
     state: started
